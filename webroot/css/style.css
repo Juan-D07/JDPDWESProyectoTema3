@@ -1,0 +1,143 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Sep 30, 2026, 8:20:05 PM
+    Author     : domin
+*/
+
+@font-face {
+    font-family: Oswald;
+    src:url(../font/Oswald-VariableFont_wght.ttf);
+}
+
+*{
+
+  box-sizing: border-box;
+  font-family: Oswald;
+  font-weight: 400; 
+  
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  color:black;
+  font-family: Roboto, Arial;
+  background-color: rgb(255, 253, 253);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+header{
+  display:flex;
+  background-color: rgb(10, 10, 10);
+  color: white;
+  height: 120px;
+  align-items: center;
+}
+
+
+
+.header-izq img{
+  height: 100px;
+  border-radius: 50px;
+  border: 2px solid orange;
+  padding:0px 0px 2px 2px
+}
+
+.header-izq{
+  flex:1;
+  align-content: center;
+}
+
+.header-der{
+  flex:1;
+  
+}
+
+h2{
+  text-align: center;
+  font-size: 1.9vw;
+  border-bottom: 2px solid orange;
+  padding: 4px;
+  margin: 0 12vw;
+}
+
+
+
+a {
+  text-decoration: none; 
+  color: black;
+  
+}
+
+a:hover {
+  color: orange;
+  
+}
+
+
+table{
+  margin: 2vw auto;
+  border-collapse: collapse;
+  max-width: 600px;
+}
+
+th, td{
+  border: 1px solid black;
+  padding:10px;
+  text-align: left;
+}
+
+th{
+  background-color: orange
+}
+
+footer{
+  margin-top: auto;
+  background-color: rgb(10, 10, 10);
+  padding: 4px;
+  color:white;
+  font-size: 20px;
+  font-style:normal;
+}
+
+.foo-txt{
+  text-align: center;
+}
+
+.miweb-link{
+  color:white;
+  text-decoration: none;
+}
+
+.miweb-link:hover{
+  color:orange;
+}
+
+
+@media (min-width:621px) and (max-width: 1001px){
+    h2{
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 620px){
+   h2{
+    font-size: 16px;
+  }
+
+}
+
+@media (min-width: 1800px){
+  h2{
+    font-size: 36px;
+  }
+}
