@@ -81,7 +81,7 @@
   <footer>
     <address>
       <p class="foo-txt">
-        © 2026 <span ><a class="miweb-link" href="../indexProyectoDWES.php" >Juan Miguel Dominguez</a></span> Todos los derechos reservados.
+        © 2026 <span ><a class="miweb-link" href="../JDPDWESProyectoDWES/indexProyectoDWES.php" >Juan Miguel Dominguez</a></span> Todos los derechos reservados. <span ><a class="miweb-link" href="https://github.com/Juan-D07/JDPDWESProyectoTema3" target="_blank">Github</a></span>
       </p>
     </address>
   </footer>
