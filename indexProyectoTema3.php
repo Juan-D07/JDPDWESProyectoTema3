@@ -5,9 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Tema 3 · Juan Miguel Dominguez </title>
-    <link rel="icon" href="webroot/images/favicon.png" type="image/png"> 
-    <link rel="stylesheet" href="webroot/font/Oswald-VariableFont_wght.ttf">   
-    <link rel="stylesheet" href="webroot/css/style.css">
+    <link rel="stylesheet" href="webroot/font/Oswald-VariableFont_wght.ttf">
+    <link rel="stylesheet" href="webroot/css/styles.css">
 </head>
 <body>
   <header>
@@ -61,7 +60,7 @@
                       1
                   </td>
                   <td>
-                      Inicializar varibles y mostrar valores por pantalla
+                      Inicializar varibles y mostrar valores por pantalla..
                   </td>
                   <td>
                       <a href="codigoPHP/ejercicio01.php" class="ejecutar">Ejecutar</a>
@@ -81,7 +80,8 @@
   <footer>
     <address>
       <p class="foo-txt">
-        © 2026 <span ><a class="miweb-link" href="../JDPDWESProyectoDWES/indexProyectoDWES.php" >Juan Miguel Dominguez</a></span> Todos los derechos reservados. <span ><a class="miweb-link" href="https://github.com/Juan-D07/JDPDWESProyectoTema3" target="_blank">Github</a></span>
+        © 2026 <span ><a class="miweb-link" href="../JDPDWESProyectoDWES/indexProyectoDWES.php" >Juan Miguel Dominguez</a></span> Todos los derechos reservados.
+      <a href="https://github.com/Juan-D07" target="_blank"> <img class="github" src="webroot/images/github.png"  alt="Github logo"/></a>
       </p>
     </address>
   </footer>

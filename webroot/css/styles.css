@@ -122,6 +122,11 @@ footer{
   color:orange;
 }
 
+.github{
+  height:30px;
+  padding-left: 10px;  
+}
+
 
 @media (min-width:621px) and (max-width: 1001px){
     h2{
