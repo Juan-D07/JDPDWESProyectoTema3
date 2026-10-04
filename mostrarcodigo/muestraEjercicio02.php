@@ -16,13 +16,11 @@
   </header>
 
   <main>
-
       <?php
-$archivo = '../codigoPHP/ejercicio01.php';
+$archivo = '../codigoPHP/ejercicio02.php';
  
 if ($archivo && file_exists($archivo)) {
     echo "<h2>Viendo el codigo de: " . htmlspecialchars($archivo) . "</h2>";
-    echo "<a href='../indexProyectoTema3.php'>⬅ Volver al inicio</a><hr>";
     // funcion nativa de PHP, lee el archivo y lo imprime con colores.
     highlight_file($archivo);
 } else {
@@ -31,7 +29,7 @@ if ($archivo && file_exists($archivo)) {
 }
 ?>
         
-   </main>
+  </main>
 
   <footer>
     <address>

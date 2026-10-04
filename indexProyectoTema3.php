@@ -11,13 +11,8 @@
 <body>
   <header>
 
-    <div class="header-izq">
       <h2> UT3: CARACTERÍSTICAS DEL LENGUAJE PHP</h2>
-    </div>
 
-    <div class="header-der">
-      <h2> Juan Miguel Dominguez Perdigon</h2>
-    </div>
   </header>
 
   <main>
@@ -53,14 +48,13 @@
                   <td>
                       <a href="mostrarcodigo/muestraEjercicio00.php" class="mostrar">Mostrar</a>
                   </td>
-                  
               </tr>
               <tr>
                   <td>
                       1
                   </td>
                   <td>
-                      Inicializar varibles y mostrar valores por pantalla..
+                      Inicializar varibles y mostrar valores por pantalla.
                   </td>
                   <td>
                       <a href="codigoPHP/ejercicio01.php" class="ejecutar">Ejecutar</a>
@@ -68,7 +62,116 @@
                   <td>
                       <a href="mostrarcodigo/muestraEjercicio01.php" class="mostrar">Mostrar</a>
                   </td>
-                  
+              </tr>
+              <tr>
+                  <td>
+                      2
+                  </td>
+                  <td>
+                      Variable heredoc
+                  </td>
+                  <td>
+                      <a href="codigoPHP/ejercicio02.php" class="ejecutar">Ejecutar</a>
+                  </td>
+                  <td>
+                      <a href="mostrarcodigo/muestraEjercicio02.php" class="mostrar">Mostrar</a>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      3
+                  </td>
+                  <td>
+                      Fecha y hora actual en castellano
+                  </td>
+                  <td>
+                  </td>
+                  <td>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      4
+                  </td>
+                  <td>
+                      Fecha y hora actual de Oporto en portugués
+                  </td>
+                  <td>
+                  </td>
+                  <td>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      5
+                  </td>
+                  <td>
+                     Variable con marca de tiempo (timestamp)
+                  </td>
+                  <td>
+                  </td>
+                  <td>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      6
+                  </td>
+                  <td>
+                      Calcular fecha y día de la semana en 60 días
+                  </td>
+                  <td>
+                  </td>
+                  <td>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      7
+                  </td>
+                  <td>
+                     Mostrar el nombre del fichero ejecutado
+                  </td>
+                  <td>
+                  </td>
+                  <td>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      8
+                  </td>
+                  <td>
+                      Mostrar la dirección IP del visitante
+                  </td>
+                  <td>
+                  </td>
+                  <td>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      9
+                  </td>
+                  <td>
+                      Mostrar el path del fichero ejecutado
+                  </td>
+                  <td>
+                  </td>
+                  <td>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      10
+                  </td>
+                  <td>
+                      Mostrar el contenido del fichero ejecutado
+                  </td>
+                  <td>
+                  </td>
+                  <td>
+                  </td>
               </tr>
               
               
@@ -81,7 +184,7 @@
     <address>
       <p class="foo-txt">
         © 2026 <span ><a class="miweb-link" href="../JDPDWESProyectoDWES/indexProyectoDWES.php" >Juan Miguel Dominguez</a></span> Todos los derechos reservados.
-      <a href="https://github.com/Juan-D07" target="_blank"> <img class="github" src="webroot/images/github.png"  alt="Github logo"/></a>
+      <a href="https://github.com/Juan-D07/JDPDWESProyectoTema3" target="_blank"> <img class="github" src="webroot/images/github.png"  alt="Github logo"/></a>
       </p>
     </address>
   </footer>
