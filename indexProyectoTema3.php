@@ -85,8 +85,10 @@
                       Fecha y hora actual en castellano
                   </td>
                   <td>
+                      <a href="codigoPHP/ejercicio03.php" class="ejecutar">Ejecutar</a>
                   </td>
                   <td>
+                      <a href="mostrarcodigo/muestraEjercicio03.php" class="mostrar">Mostrar</a>
                   </td>
               </tr>
               <tr>
@@ -97,8 +99,10 @@
                       Fecha y hora actual de Oporto en portugués
                   </td>
                   <td>
+                      <a href="codigoPHP/ejercicio04.php" class="ejecutar">Ejecutar</a>
                   </td>
                   <td>
+                      <a href="mostrarcodigo/muestraEjercicio04.php" class="mostrar">Mostrar</a>
                   </td>
               </tr>
               <tr>
