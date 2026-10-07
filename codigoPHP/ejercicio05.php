@@ -17,13 +17,14 @@
 
         <main>
             <?php
-            date_default_timezone_set("Europe/Lisbon"); //Ponemos la zona horaria portuguesa por defecto
+
             
-            $oFechaHora= new DateTime(); //Declaro un objeto de la clase DateTime
-            
+            $oFechaHoraActual= new DateTime(); //Declaro un objeto de la clase DateTime
+            $oFechaCaidaMuroBerlin= new DateTime('1989-11-9'); //Declaro un objeto de la clase DateTime con la fecha de la caida del muro de Berlin
              
-            echo "<p>Fecha y hora formateada de España: " . $oFechaHora->format('d-m-Y , H:i:s'). "</p>"; //Imprimo por pantalla la fecha formateada dia-mes-año horas:minutos:segundos
-            
+            echo '<p> Marca de tiempo de hoy (timestamp): ' .$oFechaHoraActual->getTimestamp() .'</p>';
+            echo '<p> Marca de tiempo de la Caida del Muro de Berlin: ' .$oFechaCaidaMuroBerlin->getTimestamp() .'</p>';
+            echo '<p> Fecha de la Caida del Muro de Berlin: ' .$oFechaCaidaMuroBerlin->format("d-m-Y") .'</p>';
             ?>
         </main>
 
