@@ -22,7 +22,7 @@
             $oFechaHora= new DateTime(); //Declaro un objeto de la clase DateTime
             
              
-            echo "<p>Fecha y hora formateada de Portugal: " . $oFechaHora->format('d-m-Y , H:i:s'). "</p>"; //Imprimo por pantalla la fecha formateada dia-mes-año horas:minutos:segundos
+            echo "<p>Fecha y hora formateada de España: " . $oFechaHora->format('d-m-Y , H:i:s'). "</p>"; //Imprimo por pantalla la fecha formateada dia-mes-año horas:minutos:segundos
             
             ?>
         </main>

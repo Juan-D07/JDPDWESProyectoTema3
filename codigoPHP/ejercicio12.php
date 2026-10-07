@@ -17,13 +17,26 @@
 
         <main>
             <?php
-            date_default_timezone_set("Europe/Lisbon"); //Ponemos la zona horaria portuguesa por defecto
             
-            $oFechaHora= new DateTime(); //Declaro un objeto de la clase DateTime
+            echo '<h3> Mostrar Variables superglobales con print r</h3>';
             
-             
-            echo "<p>Fecha y hora formateada de Portugal: " . $oFechaHora->format('d-m-Y , H:i:s'). "</p>"; //Imprimo por pantalla la fecha formateada dia-mes-año horas:minutos:segundos
+            echo '<p> varialbe global $_SERVER';
+            /** @var type $_SERVER */
+            print_r($_SERVER);
+            echo '</p>';  
             
+            echo '<h3> Mostrar Variables superglobales con foreach</h3>';
+            
+            echo '<p> varialbe global $_SERVER <ul>';
+            /** @var type $_SERVER */
+            
+            foreach($_SERVER as $codigo => $contenido){
+            echo "<li> el codigo $codigo contiene $contenido </li>";
+            }
+            echo '</ul>';  
+            
+            
+                         
             ?>
         </main>
 

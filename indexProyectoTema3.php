@@ -177,6 +177,45 @@
                   <td>
                   </td>
               </tr>
+              <tr>
+                  <td>
+                      12
+                  </td>
+                  <td>
+                  </td>
+                  <td>
+                      <a href="codigoPHP/ejercicio12.php" class="ejecutar">Ejecutar</a>
+                  </td>
+                  <td>
+                      <a href="mostrarcodigo/muestraEjercicio12.php" class="mostrar">Mostrar</a>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      13
+                  </td>
+                  <td>
+                  </td>
+                  <td>
+                      <a href="codigoPHP/ejercicio13.php" class="ejecutar">Ejecutar</a>
+                  </td>
+                  <td>
+                      <a href="mostrarcodigo/muestraEjercicio13.php" class="mostrar">Mostrar</a>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      15
+                  </td>
+                  <td>
+                  </td>
+                  <td>
+                      <a href="codigoPHP/ejercicio15.php" class="ejecutar">Ejecutar</a>
+                  </td>
+                  <td>
+                      <a href="mostrarcodigo/muestraEjercicio15.php" class="mostrar">Mostrar</a>
+                  </td>
+              </tr>
               
               
           </tbody>

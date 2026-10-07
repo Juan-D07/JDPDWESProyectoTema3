@@ -4,9 +4,16 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Tema 3 · Juan Miguel Dominguez </title>
-
         <link rel="stylesheet" href="../webroot/css/ejercicios.css">
+        <style>
+            .dia{
+                color:red;
+            }
 
+            .paga{
+                color:blue;
+            }
+        </style>
 
     </head>
     <body>
@@ -17,13 +24,24 @@
 
         <main>
             <?php
-            date_default_timezone_set("Europe/Lisbon"); //Ponemos la zona horaria portuguesa por defecto
             
-            $oFechaHora= new DateTime(); //Declaro un objeto de la clase DateTime
+            $aSueldoSemanal = ["Lunes" => 50,
+                "Martes" => 60,
+                "Miercoles" => 55.10,
+                "Jueves" => 56,
+                "Viernes" => 20,
+                "Sabado" => 40.77 ,
+                "Domingo" => 10];
+            $ftotal=0;
+            echo '<h3> Arrays: Sueldo </h3> <ul>';
             
-             
-            echo "<p>Fecha y hora formateada de Portugal: " . $oFechaHora->format('d-m-Y , H:i:s'). "</p>"; //Imprimo por pantalla la fecha formateada dia-mes-año horas:minutos:segundos
+            foreach($aSueldoSemanal as $sdia => $fsueldo){
+            echo "<li> el dia <span class='dia'>$sdia</span> cobro <span class='paga'>$fsueldo</span> </li>";
+            $ftotal+=$fsueldo;
+            }
+            printf( "</ul> <p> Paga de la semana fue %.2f",$ftotal );  
             
+                         
             ?>
         </main>
 

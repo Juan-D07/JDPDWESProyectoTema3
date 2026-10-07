@@ -50,6 +50,11 @@
             color: orange;
           }
           
+          pre *{
+              font-family:monospace;
+              font-weight: 700;
+          }
+          
         footer{
             margin-top: auto;
             background-color: rgb(10, 10, 10);

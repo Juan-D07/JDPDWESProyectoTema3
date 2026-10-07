@@ -28,7 +28,7 @@
         5. Desplieque <br/>                          
         HORARIO;
             
-            echo "$hHorario";
+            echo $hHorario;
             ?>
         </main>
 
