@@ -17,7 +17,7 @@
 
   <main>
       <?php
-$archivo = '../codigoPHP/ejercicio00.php';
+$archivo = '../codigoPHP/ejercicio07.php';
  
 if ($archivo && file_exists($archivo)) {
     echo "<h2>Viendo el codigo de: " . htmlspecialchars($archivo) . "</h2>";

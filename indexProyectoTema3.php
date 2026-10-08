@@ -141,8 +141,10 @@
                             Mostrar el nombre del fichero ejecutado
                         </td>
                         <td>
+                            <a href="codigoPHP/ejercicio07.php" class="ejecutar">Ejecutar</a>
                         </td>
                         <td>
+                            <a href="mostrarcodigo/muestraEjercicio07.php" class="mostrar">Mostrar</a>
                         </td>
                     </tr>
                     <tr>
@@ -153,8 +155,10 @@
                             Mostrar la dirección IP del visitante
                         </td>
                         <td>
+                            <a href="codigoPHP/ejercicio08.php" class="ejecutar">Ejecutar</a>
                         </td>
                         <td>
+                            <a href="mostrarcodigo/muestraEjercicio08.php" class="mostrar">Mostrar</a>
                         </td>
                     </tr>
                     <tr>
@@ -165,8 +169,10 @@
                             Mostrar el path del fichero ejecutado
                         </td>
                         <td>
+                            <a href="codigoPHP/ejercicio09.php" class="ejecutar">Ejecutar</a>
                         </td>
                         <td>
+                            <a href="mostrarcodigo/muestraEjercicio09.php" class="mostrar">Mostrar</a>
                         </td>
                     </tr>
                     <tr>
@@ -295,8 +301,12 @@
                     <tr>
                         <td>21</td>
                         <td>Formulario y tratamiento en otra página</td>
-                        <td></td>
-                        <td></td>
+                        <td>
+                            <a href="codigoPHP/ejercicio21.php" class="ejecutar">Ejecutar</a>
+                        </td>
+                        <td>
+                            <a href="mostrarcodigo/muestraEjercicio21.php" class="mostrar">Mostrar</a>
+                        </td>
                     </tr>
 
 
