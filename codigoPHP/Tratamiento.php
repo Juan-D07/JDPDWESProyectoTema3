@@ -16,8 +16,11 @@
         <main>
             
             <?php
-             echo '<p>Nombre: '. $_REQUEST["nombre"]. '</p>';
-            echo '<p>Fecha de Nacimiento: '. $_REQUEST["fechaNacimiento"]. '</p>';
+            $oFechaNacimientoDateTime = new DateTime($_REQUEST["fechaNacimiento"]);
+            
+            echo '<h3> Formulario Tratamiento</h3>';
+            echo '<p>Nombre: '. $_REQUEST["nombre"]. '</p>';
+            echo '<p>Fecha de Nacimiento: '. $oFechaNacimientoDateTime->format("d/m/Y") . '</p>';
             echo '<p>Sueldo: '. $_REQUEST["sueldo"]. '</p>';
         
             ?>

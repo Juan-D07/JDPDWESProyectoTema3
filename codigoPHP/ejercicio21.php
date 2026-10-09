@@ -33,16 +33,17 @@
 
         <main>
             <form action="Tratamiento.php" name="formulario" method="post">
+                <h3>Formulario: Tratamiento</h3>
                 <label for="nombre" >Nombre:</label>
-                <input type="text" name="nombre" id="nombre" required/>
+                <input type="text" name="nombre" id="nombre"/>
                 <br/>
                 <label for="fechaNacimiento">Fecha de Nacimiento:</label>
-                <input type="date" name="fechaNacimiento" id="fechaNacimiento" required/>
+                <input type="date" name="fechaNacimiento" id="fechaNacimiento" value=/>
                 <!-- <input type="datetime" name="fechaNacimiento" id="fechaNacimiento"/> -->
                 
                 <br/>
                 <label for="sueldo">Sueldo:</label>
-                <input type="number" name="sueldo" id="sueldo" step="any" required/>
+                <input type="number" name="sueldo" id="sueldo" step="any"/>
                 <br/>
                 <input type="submit" name="submit" id="submit"/>
             <?php
