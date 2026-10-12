@@ -19,7 +19,7 @@
             <?php
             $sNombre = "Juan Miguel Dominguez";
 
-            $hHorario = <<<HORARIO
+            $sHorario = <<<HORARIO
         El estudiante $sNombre tiene el siguiente horario los lunes: <br/>
         1. Diseño <br/>
         2. Ciberseguridad <br/>
@@ -27,8 +27,15 @@
         4. Empresa <br/>
         5. Desplieque <br/>                          
         HORARIO;
+            $sSentenciaSQL = <<<SQL
+        Select c.nombre, sum(p.pvp - (pvp*(descuento/100))) from cliente c
+        inner join factura f on f.clienteid=c.clienteID
+        inner join lineas_facturas lf on lf.facturaid=f.facturaid
+        inner join producto p on p.productoid=lf.productoid
+        group by f.clienteid;
+        SQL;
             
-            echo $hHorario;
+            echo $sHorario ."<br>" . $sSentenciaSQL;
             ?>
         </main>
 

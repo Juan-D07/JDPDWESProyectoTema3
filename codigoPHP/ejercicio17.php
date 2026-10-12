@@ -13,6 +13,9 @@
             .libre{
                 color:limegreen;
             }
+            main p{
+                text-align: center;
+            }
         </style>
 
     </head>
@@ -24,30 +27,52 @@
 
         <main>
             <?php
-            
-            $aAseintosDisponibilidadTeatro = 
-                [["ocupado","ocupado","libre","libre","libre","libre"],
-                ["libre","ocupado","ocupado","ocupado","libre","libre"],
-                ["libre","ocupado","libre","ocupado","ocupado","libre"],
-                ["libre","libre","libre","libre","ocupado","ocupado"],
-                ["ocupado","ocupado","ocupado","libre","ocupado","ocupado"]];
-            echo '<h3> Arrays: Asientos Teatro </h3>';
-            
-            foreach($aAseintosDisponibilidadTeatro as $aAseintosDisponibilidadFila){
+            $aAseintosDisponibilidadTeatro = [["libre", "libre", "libre", "libre", "libre", "libre", "libre", "libre", "Moises", "libre", "Yolanda", "libre", "libre", "libre", "libre", "libre", "libre", "Juan", "libre", "libre", "libre", "libre", "libre", "libre"],
+                        ["libre", "Alvaro", "libre", "libre", "libre", "libre", "libre", "libre", "libre", "libre", "libre", "libre", "libre", "libre", "libre", "Santiago", "libre", "libre"]];
+            echo '<h3> For Each: Asientos Teatro </h3>';
+
+            foreach ($aAseintosDisponibilidadTeatro as $aAseintosDisponibilidadFila) {
                 echo '<p>';
-                foreach($aAseintosDisponibilidadFila as $sAseintoDisponibilidad){
-                    if (strcmp($sAseintoDisponibilidad, "libre")==0){
-                    echo "<span class='libre'> $sAseintoDisponibilidad <span>";
-                    }
-                    else {
-                    echo "<span class='ocupado'> ocup <span>";
+                foreach ($aAseintosDisponibilidadFila as $sAseintoDisponibilidad) {
+                    if (strcmp($sAseintoDisponibilidad, "libre") == 0) {
+                        echo "<span class='libre'> $sAseintoDisponibilidad <span>";
+                    } else {
+                        echo "<span class='ocupado'> $sAseintoDisponibilidad <span>";
                     }
                 }
-                
-            echo '</p>';
+
+                echo '</p>';
             }
-            
-                         
+            echo '<h3> For: Asientos Teatro </h3>';
+            for ($i = 0; $i < count($aAseintosDisponibilidadTeatro); $i++) {
+                echo '<p>';
+                for ($j = 0; $j < count($aAseintosDisponibilidadTeatro[$i]); $j++) {
+                    if (strcmp($aAseintosDisponibilidadTeatro[$i][$j], "libre") == 0) {
+                        echo "<span class='libre'>" . $aAseintosDisponibilidadTeatro[$i][$j] . " <span>";
+                    } else {
+                        echo "<span class='ocupado'>" . $aAseintosDisponibilidadTeatro[$i][$j] . " <span>";
+                    }
+                }
+
+                echo '</p>';
+            }
+            echo '<h3> While: Asientos Teatro </h3>';
+            $iContadorFila = 0;
+            while ($iContadorFila < count($aAseintosDisponibilidadTeatro)) {
+                echo '<p>';
+                $iContadorColumna = 0;
+                while ($iContadorColumna < count($aAseintosDisponibilidadTeatro[$iContadorFila])) {
+                    if (strcmp($aAseintosDisponibilidadTeatro[$iContadorFila][$iContadorColumna], "libre") == 0) {
+                        echo "<span class='libre'>" . $aAseintosDisponibilidadTeatro[$iContadorFila][$iContadorColumna] . " <span>";
+                    } else {
+                        echo "<span class='ocupado'>" . $aAseintosDisponibilidadTeatro[$iContadorFila][$iContadorColumna] . " <span>";
+                    }
+                    $iContadorColumna++;
+                }
+
+                echo '</p>';
+                $iContadorFila++;
+            }
             ?>
         </main>
 

@@ -183,8 +183,10 @@
                             Mostrar el contenido del fichero ejecutado
                         </td>
                         <td>
+                            <a href="codigoPHP/ejercicio10.php" class="ejecutar">Ejecutar</a>
                         </td>
                         <td>
+                            <a href="mostrarcodigo/muestraEjercicio10.php" class="mostrar">Mostrar</a>
                         </td>
                     </tr>
                     <tr>
@@ -195,10 +197,8 @@
                             Mostrar el documento PHPDoc del proyecto
                         </td>
                         <td>
-                            <a href="codigoPHP/ejercicio12.php" class="ejecutar">Ejecutar</a>
                         </td>
                         <td>
-                            <a href="mostrarcodigo/muestraEjercicio12.php" class="mostrar">Mostrar</a>
                         </td>
                     </tr>
                     <tr>
@@ -258,8 +258,12 @@
                     <tr>
                         <td>16</td>
                         <td>Recorrer el array de sueldos mediante funciones</td>
-                        <td></td>
-                        <td></td>
+                        <td>
+                            <a href="codigoPHP/ejercicio16.php" class="ejecutar">Ejecutar</a>
+                        </td>
+                        <td>
+                            <a href="mostrarcodigo/muestraEjercicio16.php" class="mostrar">Mostrar</a>
+                        </td>
                     </tr>
 
                     <tr>
@@ -280,8 +284,12 @@
                     <tr>
                         <td>18</td>
                         <td>Recorrer el array del teatro mediante funciones</td>
-                        <td></td>
-                        <td></td>
+                        <td>
+                            <a href="codigoPHP/ejercicio18.php" class="ejecutar">Ejecutar</a>
+                        </td>
+                        <td>
+                            <a href="mostrarcodigo/muestraEjercicio18.php" class="mostrar">Mostrar</a>
+                        </td>
                     </tr>
 
                     <tr>
