@@ -326,6 +326,16 @@
                             <a href="mostrarcodigo/muestraEjercicio22.php" class="mostrar">Mostrar</a>
                         </td>
                     </tr>
+                    <tr>
+                        <td>23</td>
+                        <td>Formulario y tratamiento en la misma página mas validacion</td>
+                        <td>
+                            <a href="codigoPHP/ejercicio23.php" class="ejecutar">Ejecutar</a>
+                        </td>
+                        <td>
+                            <a href="mostrarcodigo/muestraEjercicio23.php" class="mostrar">Mostrar</a>
+                        </td>
+                    </tr>
 
 
                 </tbody>

@@ -16,11 +16,11 @@
             /* Remove arrows for Chrome, Safari, Edge, and Opera */
             input::-webkit-outer-spin-button,
             input::-webkit-inner-spin-button {
-              -webkit-appearance: none;
+                -webkit-appearance: none;
             }
             /* Remove arrows for Firefox */
             input[type=number] {
-              -moz-appearance: textfield;
+                -moz-appearance: textfield;
             }
         </style>
 
@@ -34,20 +34,18 @@
         <main>
             <?php
             // Comprueba si el formulario se a enviado
-            if (isset($_REQUEST["submit"])){
-            // en caso de si, muestra el contenido del formulario
-            $oFechaNacimientoDateTime = new DateTime($_REQUEST["fechaNacimiento"]);
-            
-            echo '<h3> Formulario Tratamiento</h3>';
-            echo '<p>Nombre: '. $_REQUEST["nombre"]. '</p>';
-            echo '<p>Fecha de Nacimiento: '. $oFechaNacimientoDateTime->format("d/m/Y") . '</p>';
-            echo '<p>Sueldo: '. $_REQUEST["sueldo"]. '</p>';
-            
-            }
-            else{
-            // en caso de no, se muestra el formulario para rellenar
-            ?>
-                <form action="<?php echo $_SERVER['PHP_SELF']?>" name="formulario" method="post">
+            if (isset($_REQUEST["submit"])) {
+                // Código que se ejecuta cuando se envía el formulario
+                $oFechaNacimientoDateTime = new DateTime($_REQUEST["fechaNacimiento"]);
+
+                echo '<h3> Formulario Tratamiento</h3>';
+                echo '<p>Nombre: ' . $_REQUEST["nombre"] . '</p>';
+                echo '<p>Fecha de Nacimiento: ' . $oFechaNacimientoDateTime->format("d/m/Y") . '</p>';
+                echo '<p>Sueldo: ' . $_REQUEST["sueldo"] . '</p>';
+            } else {
+                // Código que se ejecuta antes de rellenar el formulario
+                ?>
+                <form action="<?php echo $_SERVER['PHP_SELF'] ?>" name="formulario" method="post" novalidate>
                     <h3>Formulario: Tratamiento</h3>
                     <label for="nombre" >Nombre:</label>
                     <input type="text" name="nombre" id="nombre"/>
@@ -64,7 +62,7 @@
             <?php
             }
             ?>
-              
+
         </main>
 
         <footer>

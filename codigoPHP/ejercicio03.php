@@ -21,7 +21,6 @@
             //date_default_timezone_set("Europe/Madrid"); 
             
             $oFechaHoraActual= new DateTime(); //Declaro un objeto de la clase DateTime
-            
              
             echo "<p>Fecha y hora formateada de España: " . $oFechaHoraActual->format('d-m-Y , H:i:s A'). "</p>"; //Imprimo por pantalla la fecha formateada dia-mes-año horas:minutos:segundos
             

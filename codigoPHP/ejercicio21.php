@@ -32,7 +32,7 @@
         </header>
 
         <main>
-            <form action="Tratamiento.php" name="formulario" method="post">
+            <form action="Tratamiento.php" name="formulario" method="post" novalidate>
                 <h3>Formulario: Tratamiento</h3>
                 <label for="nombre" >Nombre:</label>
                 <input type="text" name="nombre" id="nombre"/>
