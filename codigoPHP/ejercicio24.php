@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Tema 3 · Juan Miguel Dominguez </title>
         <link rel="stylesheet" href="../webroot/css/ejercicios.css">
-        <?php require_once '../core/231018libreriaValidacion.php'; ?>
         <style>
             input{
                 margin: 10px 5px;
@@ -34,6 +33,7 @@
 
         <main>
             <?php
+            require_once '../core/231018libreriaValidacion.php';
             //Inicializacion de variables
             $entradaOK = true; // Variable que nos indica que todo va bien
             //Array donde recogemos los mensajes de error
@@ -50,12 +50,11 @@
             // Comprueba si el formulario se a enviado
             if (isset($_REQUEST["enviar"])) {
                 // Validar Entrada
-                // $oFechaHoraActual= new DateTime();
-                //$oFechaHoraActual->format("d/m/Y")
+                $oFechaHoraActual= new DateTime();
                 
                 $aError["nombre"] = validacionFormularios::comprobarAlfabetico($_REQUEST["nombre"],1000,1,1);
                 $aError["apellido"] = validacionFormularios::comprobarAlfabetico($_REQUEST["apellido"],1000,1,1);
-                $aError["fechaNacimiento"] = validacionFormularios::validarFecha($_REQUEST["fechaNacimiento"],"01/01/2027","01/01/1900", 1);
+                $aError["fechaNacimiento"] = validacionFormularios::validarFecha($_REQUEST["fechaNacimiento"],$oFechaHoraActual->format("m/d/Y"),"01/01/1900", 1);
 
                 foreach ($aError as $value) {
                     if (!empty($value)) {
@@ -87,8 +86,12 @@
                     <h3>Formulario: Tratamiento</h3>
                     <label for="nombre" >Nombre:</label>
                     <?php
-                    if (empty($aError["nombre"])) {                                 //htmlspecialchars($_REQUEST["nombre"])
-                        echo '<input type="text" name="nombre" id="nombre" value="'. $_REQUEST["nombre"].' "/>';
+                    if (empty($aError["nombre"])) {
+                        if (empty($_REQUEST["nombre"])){
+                            echo '<input type="text" name="nombre" id="nombre" />';
+                        }else{
+                            echo '<input type="text" name="nombre" id="nombre" value="'.htmlspecialchars($_REQUEST["nombre"]).'"/>';
+                        }
                     } else{
                         echo '<input type="text" name="nombre" id="nombre" />';
                         echo "<span style='color:red;'>" . $aError['nombre'] . "</span>";
@@ -98,17 +101,25 @@
                     <label for="apellido" >Apellido:</label>
                     <?php
                     if (empty($aError["apellido"])) {
-                        echo '<input type="text" name="apellido" id="apellido" value="'. $_REQUEST["apellido"].' "/>';
+                        if (empty($_REQUEST["apellido"])){
+                            echo '<input type="text" name="apellido" id="apellido" />';
+                        }else{
+                            echo '<input type="text" name="apellido" id="apellido" value="'.htmlspecialchars($_REQUEST["apellido"]).'"/>';
+                        }
                     } else{
                         echo '<input type="text" name="apellido" id="apellido" />';
-                        echo "<span style='color:red;'>" . $aError['apellido'] . "</span>";
+                        echo "<span style='color:red;'>" . $aError['fechaNacimiento'] . "</span>";
                     }
                     ?>
                     <br/>
                     <label for="fechaNacimiento">Fecha de Nacimiento:</label>
                     <?php
                     if (empty($aError["fechaNacimiento"])) {
-                        echo '<input type="date" name="fechaNacimiento" id="fechaNacimiento" value="'.$_REQUEST["fechaNacimiento"].'"/>';
+                        if (empty($_REQUEST["fechaNacimiento"])){
+                            echo '<input type="date" name="fechaNacimiento" id="fechaNacimiento" />';
+                        }else{
+                            echo '<input type="date" name="fechaNacimiento" id="fechaNacimiento" value="'.htmlspecialchars($_REQUEST["fechaNacimiento"]).'"/>';
+                        }
                     } else{
                         echo '<input type="date" name="fechaNacimiento" id="fechaNacimiento" />';
                         echo "<span style='color:red;'>" . $aError['fechaNacimiento'] . "</span>";
