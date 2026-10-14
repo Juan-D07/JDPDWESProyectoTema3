@@ -337,7 +337,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>23</td>
+                        <td>24</td>
                         <td>Formulario y tratamiento en la misma página mas validacion y relleno de campos</td>
                         <td>
                             <a href="codigoPHP/ejercicio24.php" class="ejecutar">Ejecutar</a>

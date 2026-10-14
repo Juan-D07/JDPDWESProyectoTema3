@@ -48,14 +48,14 @@
                 'fechaNacimiento' => ""];
 
             // Comprueba si el formulario se a enviado
-            if (isset($_POST["enviar"])) {
+            if (isset($_REQUEST["enviar"])) {
                 // Validar Entrada
                 // $oFechaHoraActual= new DateTime();
                 //$oFechaHoraActual->format("d/m/Y")
                 
-                $aError["nombre"] = validacionFormularios::comprobarAlfabetico($_POST["nombre"],1000,1,1);
-                $aError["apellido"] = validacionFormularios::comprobarAlfabetico($_POST["apellido"],1000,1,1);
-                $aError["fechaNacimiento"] = validacionFormularios::validarFecha($_POST["fechaNacimiento"],"01/01/2027","01/01/1900", 1);
+                $aError["nombre"] = validacionFormularios::comprobarAlfabetico($_REQUEST["nombre"],1000,1,1);
+                $aError["apellido"] = validacionFormularios::comprobarAlfabetico($_REQUEST["apellido"],1000,1,1);
+                $aError["fechaNacimiento"] = validacionFormularios::validarFecha($_REQUEST["fechaNacimiento"],"01/01/2027","01/01/1900", 1);
 
                 foreach ($aError as $value) {
                     if (!empty($value)) {
@@ -70,9 +70,9 @@
 
             if ($entradaOK) {
                 //Cargar la variable $aRespuestas y tratamiento de datos OK
-                $aRespuesta["nombre"] = htmlspecialchars($_POST["nombre"]);
-                $aRespuesta["apellido"] = htmlspecialchars($_POST["apellido"]);
-                $aRespuesta["fechaNacimiento"] = htmlspecialchars($_POST["fechaNacimiento"]);
+                $aRespuesta["nombre"] = htmlspecialchars($_REQUEST["nombre"]);
+                $aRespuesta["apellido"] = htmlspecialchars($_REQUEST["apellido"]);
+                $aRespuesta["fechaNacimiento"] = htmlspecialchars($_REQUEST["fechaNacimiento"]);
 
                 $oFechaNacimientoDateTime = new DateTime($aRespuesta["fechaNacimiento"]);
 
@@ -87,8 +87,8 @@
                     <h3>Formulario: Tratamiento</h3>
                     <label for="nombre" >Nombre:</label>
                     <?php
-                    if (empty($aError["nombre"])) {
-                        echo '<input type="text" name="nombre" id="nombre" value="'. htmlspecialchars($_POST["nombre"]).' "/>';
+                    if (empty($aError["nombre"])) {                                 //htmlspecialchars($_REQUEST["nombre"])
+                        echo '<input type="text" name="nombre" id="nombre" value="'. $_REQUEST["nombre"].' "/>';
                     } else{
                         echo '<input type="text" name="nombre" id="nombre" />';
                         echo "<span style='color:red;'>" . $aError['nombre'] . "</span>";
@@ -98,7 +98,7 @@
                     <label for="apellido" >Apellido:</label>
                     <?php
                     if (empty($aError["apellido"])) {
-                        echo '<input type="text" name="apellido" id="apellido" value="'. htmlspecialchars($_POST["apellido"]).' "/>';
+                        echo '<input type="text" name="apellido" id="apellido" value="'. $_REQUEST["apellido"].' "/>';
                     } else{
                         echo '<input type="text" name="apellido" id="apellido" />';
                         echo "<span style='color:red;'>" . $aError['apellido'] . "</span>";
@@ -108,7 +108,7 @@
                     <label for="fechaNacimiento">Fecha de Nacimiento:</label>
                     <?php
                     if (empty($aError["fechaNacimiento"])) {
-                        echo '<input type="date" name="fechaNacimiento" id="fechaNacimiento" value="'.htmlspecialchars($_POST["fechaNacimiento"]).'"/>';
+                        echo '<input type="date" name="fechaNacimiento" id="fechaNacimiento" value="'.$_REQUEST["fechaNacimiento"].'"/>';
                     } else{
                         echo '<input type="date" name="fechaNacimiento" id="fechaNacimiento" />';
                         echo "<span style='color:red;'>" . $aError['fechaNacimiento'] . "</span>";
