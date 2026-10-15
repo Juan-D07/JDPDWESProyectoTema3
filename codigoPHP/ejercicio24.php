@@ -85,25 +85,25 @@
                     <h3>Formulario: Tratamiento</h3>
                     <label for="nombre" >Nombre:</label>
                     
-                    <input type="text" name="nombre" id="nombre" value="<?php echo !empty($_REQUEST["nombre"]) ? 'htmlspecialchars($_REQUEST["nombre"])': '' ?>"/>
+                    <input type="text" name="nombre" id="nombre" value="<?php echo !empty($_REQUEST["nombre"]) ? htmlspecialchars($_REQUEST["nombre"]): '' ?>"/>
                     
                     <?php echo !empty($aError["nombre"]) ? "<span style='color:red;'>" . $aError['nombre'] . "</span>": '' ?>
 
                     <br/>
                     <label for="apellido" >Apellido:</label>
                     
-                    <input type="text" name="nombre" id="nombre" value="<?php echo !empty($_REQUEST["nombre"]) ? 'htmlspecialchars($_REQUEST["nombre"])': '' ?>"/>
+                    <input type="text" name="apellido" id="apellido" value="<?php echo !empty($_REQUEST["apellido"]) ? htmlspecialchars($_REQUEST["apellido"]): '' ?>"/>
                     
-                    <?php echo !empty($aError["nombre"]) ? "<span style='color:red;'>" . $aError['nombre'] . "</span>": '' ?>
+                    <?php echo !empty($aError["apellido"]) ? "<span style='color:red;'>" . $aError['apellido'] . "</span>": '' ?>
                     <br/>
                     <label for="fechaNacimiento">Fecha de Nacimiento:</label>
                     
-                    <input type="text" name="nombre" id="nombre" value="<?php echo !empty($_REQUEST["nombre"]) ? 'htmlspecialchars($_REQUEST["nombre"])': '' ?>"/>
+                    <input type="date" name="fechaNacimiento" id="fechaNacimiento" value="<?php echo !empty($_REQUEST["fechaNacimiento"])&&empty($aError["fechaNacimiento"]) ? htmlspecialchars($_REQUEST["fechaNacimiento"]): '' ?>"/>
                     
-                    <?php echo !empty($aError["nombre"]) ? "<span style='color:red;'>" . $aError['nombre'] . "</span>": '' ?>
+                    <?php echo !empty($aError["fechaNacimiento"]) ? "<span style='color:red;'>" . $aError['fechaNacimiento'] . "</span>": '' ?>
 
                     <br/>
-                    <input type="submit" name="enviar" id="enviar"/>
+                    <input type="submit" name="enviar" id="enviar" value="Enviar"/>
                 </form>  
                 <?php
             }

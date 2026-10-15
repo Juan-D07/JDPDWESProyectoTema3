@@ -40,6 +40,7 @@ $iEdad = 18;
 $fSaldo = 15.06;
 $bSoleado = true;
 $aColores = ["rojo", "azul","amarillo"];
+define("BIENVENIDA","Hola, como estas?");
 
 echo '<h3> Imprir por pantalla con "echo" </h3>';
 echo '<p> la variable <span class="nombre"> $sNombre </span> es de tipo '. "<span class='tipo'>".gettype($sNombre)."</span> y contiene el <span class='valor'>$sNombre </span></p>";
