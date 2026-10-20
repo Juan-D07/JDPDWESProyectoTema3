@@ -39,22 +39,21 @@
             //Array donde recogemos los mensajes de error
             $aError = [
                 'nombre' => "",
-                'apellido' => "",
-                'fechaNacimiento' => ""];
+                'fechaNacimiento' => "",
+                'sueldo' => ""];
             //Array donde recogemos la respuestas correctas
             $aRespuesta = [
                 'nombre' => "",
-                'apellido' => "",
-                'fechaNacimiento' => ""];
+                'fechaNacimiento' => "",
+                'sueldo' => ""];
 
             // Comprueba si el formulario se a enviado
             if (isset($_REQUEST["enviar"])) {
                 // Validar Entrada
-                $oFechaHoraActual= new DateTime();
                 
                 $aError["nombre"] = validacionFormularios::comprobarAlfabetico($_REQUEST["nombre"],1000,1,1);
-                $aError["apellido"] = validacionFormularios::comprobarAlfabetico($_REQUEST["apellido"],1000,1,1);
                 $aError["fechaNacimiento"] = validacionFormularios::validarFecha($_REQUEST["fechaNacimiento"],date("m/d/Y"),"01/01/1900", 1);
+                $aError["sueldo"] = str_contains($_REQUEST["sueldo"], ".")?"Usar coma para separar decimales":validacionFormularios::comprobarFloat(floatval($_REQUEST["sueldo"]), PHP_FLOAT_MAX, 0, 1);
 
                 foreach ($aError as $value) {
                     if (!empty($value)) {
@@ -70,14 +69,16 @@
             if ($entradaOK) {
                 //Cargar la variable $aRespuestas y tratamiento de datos OK
                 $aRespuesta["nombre"] = htmlspecialchars($_REQUEST["nombre"]);
-                $aRespuesta["apellido"] = htmlspecialchars($_REQUEST["apellido"]);
                 $aRespuesta["fechaNacimiento"] = new DateTime($_REQUEST["fechaNacimiento"]);
+                $aRespuesta["sueldo"] = $_REQUEST["sueldo"].' $' ;
+
 
 
                 echo '<h3> Formulario Tratamiento</h3>';
                 echo '<p>Nombre: ' . $aRespuesta["nombre"] . '</p>';
-                echo '<p>Apellido: ' . $aRespuesta["apellido"] . '</p>';
                 echo '<p>Fecha de Nacimiento: ' . $aRespuesta["fechaNacimiento"]->format("d/m/Y") . '</p>';
+                echo '<p>Sueldo: ' . $aRespuesta["sueldo"] . '</p>';
+
             } else {
                 // Mostrar Formulario
                 ?>
@@ -90,18 +91,19 @@
                     <?php echo !empty($aError["nombre"]) ? "<span style='color:red;'>" . $aError['nombre'] . "</span>": '' ?>
 
                     <br/>
-                    <label for="apellido" >Apellido:</label>
                     
-                    <input type="text" name="apellido" id="apellido" value="<?php echo !empty($_REQUEST["apellido"]) ? htmlspecialchars($_REQUEST["apellido"]): '' ?>"/>
-                    
-                    <?php echo !empty($aError["apellido"]) ? "<span style='color:red;'>" . $aError['apellido'] . "</span>": '' ?>
-                    <br/>
                     <label for="fechaNacimiento">Fecha de Nacimiento:</label>
                     
                     <input type="date" name="fechaNacimiento" id="fechaNacimiento" value="<?php echo !empty($_REQUEST["fechaNacimiento"])&&empty($aError["fechaNacimiento"]) ? htmlspecialchars($_REQUEST["fechaNacimiento"]): '' ?>"/>
                     
                     <?php echo !empty($aError["fechaNacimiento"]) ? "<span style='color:red;'>" . $aError['fechaNacimiento'] . "</span>": '' ?>
-
+                    <br/>
+                    
+                    <label for="sueldo" >Sueldo:</label>
+                    
+                    <input type="text" name="sueldo" id="sueldo" value="<?php echo !empty($_REQUEST["sueldo"]) ? htmlspecialchars($_REQUEST["sueldo"]): '' ?>"/>
+                    
+                    <?php echo !empty($aError["sueldo"]) ? "<span style='color:red;'>" . $aError['sueldo'] . "</span>": '' ?>
                     <br/>
                     <input type="submit" name="enviar" id="enviar" value="Enviar"/>
                 </form>  
