@@ -9,7 +9,7 @@
             input{
                 margin: 10px 5px;
             }
-            #nombre,#fechaNacimiento,#apellido{
+            #nombre,#fechaNacimiento,#sueldo{
                 background-color: #fffce0;
                 border:1px solid black;
             }
@@ -21,6 +21,13 @@
             /* Remove arrows for Firefox */
             input[type=number] {
                 -moz-appearance: textfield;
+            }
+            
+            .advertancia{
+                font-size: 12px;
+                color:gray;
+                margin-top: 12px;
+                
             }
         </style>
 
@@ -53,7 +60,7 @@
                 
                 $aError["nombre"] = validacionFormularios::comprobarAlfabetico($_REQUEST["nombre"],1000,1,1);
                 $aError["fechaNacimiento"] = validacionFormularios::validarFecha($_REQUEST["fechaNacimiento"],date("m/d/Y"),"01/01/1900", 1);
-                $aError["sueldo"] = str_contains($_REQUEST["sueldo"], ".")?"Usar coma para separar decimales":validacionFormularios::comprobarFloat(floatval($_REQUEST["sueldo"]), PHP_FLOAT_MAX, 0, 1);
+                $aError["sueldo"] = validacionFormularios::comprobarFloatMonetarioES($_REQUEST["sueldo"], PHP_FLOAT_MAX, 0, 1);
 
                 foreach ($aError as $value) {
                     if (!empty($value)) {
@@ -70,14 +77,14 @@
                 //Cargar la variable $aRespuestas y tratamiento de datos OK
                 $aRespuesta["nombre"] = htmlspecialchars($_REQUEST["nombre"]);
                 $aRespuesta["fechaNacimiento"] = new DateTime($_REQUEST["fechaNacimiento"]);
-                $aRespuesta["sueldo"] = $_REQUEST["sueldo"].' $' ;
+                $aRespuesta["sueldo"] = $_REQUEST["sueldo"];
 
 
 
                 echo '<h3> Formulario Tratamiento</h3>';
                 echo '<p>Nombre: ' . $aRespuesta["nombre"] . '</p>';
                 echo '<p>Fecha de Nacimiento: ' . $aRespuesta["fechaNacimiento"]->format("d/m/Y") . '</p>';
-                echo '<p>Sueldo: ' . $aRespuesta["sueldo"] . '</p>';
+                echo '<p>Sueldo: ' . number_format(floatval(str_replace(',', '.', $aRespuesta["sueldo"])), 2, ',', '.') . ' € </p>';
 
             } else {
                 // Mostrar Formulario
@@ -98,13 +105,15 @@
                     
                     <?php echo !empty($aError["fechaNacimiento"]) ? "<span style='color:red;'>" . $aError['fechaNacimiento'] . "</span>": '' ?>
                     <br/>
-                    
+                    <div class="advertancia"> Usar un coma para separa los decimales de los enteros</div>
                     <label for="sueldo" >Sueldo:</label>
                     
-                    <input type="text" name="sueldo" id="sueldo" value="<?php echo !empty($_REQUEST["sueldo"]) ? htmlspecialchars($_REQUEST["sueldo"]): '' ?>"/>
+                    <input type="text" name="sueldo" id="sueldo" title="Usar comas para separa decimales" value="<?php echo !empty($_REQUEST["sueldo"]) ? htmlspecialchars($_REQUEST["sueldo"]): '' ?>"/>
                     
                     <?php echo !empty($aError["sueldo"]) ? "<span style='color:red;'>" . $aError['sueldo'] . "</span>": '' ?>
+                    
                     <br/>
+                    
                     <input type="submit" name="enviar" id="enviar" value="Enviar"/>
                 </form>  
                 <?php
