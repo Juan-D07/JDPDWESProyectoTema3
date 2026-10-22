@@ -75,16 +75,16 @@
 
             if ($entradaOK) {
                 //Cargar la variable $aRespuestas y tratamiento de datos OK
-                $aRespuesta["nombre"] = htmlspecialchars($_REQUEST["nombre"]);
+                $aRespuesta["nombre"] = ($_REQUEST["nombre"]);
+                //
                 $aRespuesta["fechaNacimiento"] = new DateTime($_REQUEST["fechaNacimiento"]);
-                $aRespuesta["sueldo"] = $_REQUEST["sueldo"];
-
+                $aRespuesta["sueldo"] = floatval(str_replace(',', '.', $_REQUEST["sueldo"]));
 
 
                 echo '<h3> Formulario Tratamiento</h3>';
                 echo '<p>Nombre: ' . $aRespuesta["nombre"] . '</p>';
                 echo '<p>Fecha de Nacimiento: ' . $aRespuesta["fechaNacimiento"]->format("d/m/Y") . '</p>';
-                echo '<p>Sueldo: ' . number_format(floatval(str_replace(',', '.', $aRespuesta["sueldo"])), 2, ',', '.') . ' € </p>';
+                echo '<p>Sueldo: ' . number_format($aRespuesta["sueldo"], 2, ',', '.') . ' € </p>';
 
             } else {
                 // Mostrar Formulario
@@ -105,10 +105,10 @@
                     
                     <?php echo !empty($aError["fechaNacimiento"]) ? "<span style='color:red;'>" . $aError['fechaNacimiento'] . "</span>": '' ?>
                     <br/>
-                    <div class="advertancia"> Usar un coma para separa los decimales de los enteros</div>
+                    <div class="advertancia"> Usar una coma para separar los decimales de los enteros</div>
                     <label for="sueldo" >Sueldo:</label>
                     
-                    <input type="text" name="sueldo" id="sueldo" title="Usar comas para separa decimales" value="<?php echo !empty($_REQUEST["sueldo"]) ? htmlspecialchars($_REQUEST["sueldo"]): '' ?>"/>
+                    <input type="text" name="sueldo" id="sueldo" value="<?php echo !empty($_REQUEST["sueldo"]) ? htmlspecialchars($_REQUEST["sueldo"]): '' ?>"/>
                     
                     <?php echo !empty($aError["sueldo"]) ? "<span style='color:red;'>" . $aError['sueldo'] . "</span>": '' ?>
                     
