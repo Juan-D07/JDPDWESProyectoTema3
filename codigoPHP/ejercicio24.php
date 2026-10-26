@@ -29,12 +29,14 @@
                 margin-top: 12px;
                 
             }
+            .container{
+                align-content: center;
+            }
         </style>
 
     </head>
     <body>
         <header>
-
             <h2> UT3: CARACTERÍSTICAS DEL LENGUAJE PHP</h2>
         </header>
 
@@ -89,6 +91,7 @@
             } else {
                 // Mostrar Formulario
                 ?>
+            <div class="container">
             <form action="<?php echo $_SERVER['PHP_SELF'] ?>" name="formulario" method="post" novalidate>
                     <h3>Formulario: Tratamiento</h3>
                     <label for="nombre" >Nombre:</label>
@@ -115,7 +118,8 @@
                     <br/>
                     
                     <input type="submit" name="enviar" id="enviar" value="Enviar"/>
-                </form>  
+                </form>
+            </div>
                 <?php
             }
             ?>
