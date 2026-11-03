@@ -18,23 +18,15 @@
         <main>
             <?php
             
-            echo '<h3> Mostrar Variables superglobales con print r</h3>';
+            echo '<h3> Mostrar Variables superglobales con foreach y printr</h3>';
             
-            echo '<p> varialbe global $_SERVER';
-            /** @var type $_SERVER */
-            print_r($_SERVER);
-            echo '</p>';  
-            
-            echo '<h3> Mostrar Variables superglobales con foreach</h3>';
-            
-            echo '<p> varialbe global $_SERVER <ul>';
-            /** @var type $_SERVER */
-            
-            foreach($_SERVER as $codigo => $contenido){
-            echo "<li> el codigo $codigo contiene $contenido </li>";
-            }
-            echo '</ul>';  
-            
+            foreach ($GLOBALS as $nombre => $contenido) {
+                echo "<h3>$nombre</h3>";
+                echo "<pre>";
+                print_r($contenido);
+                echo "</pre>";
+                echo "<hr>";
+            } 
             
                          
             ?>
