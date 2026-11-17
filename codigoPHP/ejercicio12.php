@@ -16,19 +16,28 @@
         </header>
 
         <main>
+            <h3> Mostrar Variables superglobales</h3>
             <?php
-            
-            echo '<h3> Mostrar Variables superglobales con foreach y printr</h3>';
-            
-            foreach ($GLOBALS as $nombre => $contenido) {
-                echo "<h3>$nombre</h3>";
-                echo "<pre>";
-                print_r($contenido);
-                echo "</pre>";
-                echo "<hr>";
-            } 
-            
-                         
+
+            // Recorrer el array de variables super global
+            foreach ($GLOBALS as $nombreSuperglobal => $arraySuperglobal) {
+                echo "<h3 class='superGlobal'>$nombreSuperglobal</h3>";
+                //combrobacion de que la variable no este vacia
+                if (!empty($arraySuperglobal)) {
+                    echo "<ul>";
+                    //recorrer la variable  super global
+                    foreach ($arraySuperglobal as $nombre => $contenido) {
+                        //comprobacion de que el valor dentro de la variable sea un array
+                        if (is_array($contenido)) {
+                            $contenido = "<pre>" . print_r($contenido, true) . "</pre>";
+                        }
+                        echo "<li><span style='color:blue;font-weight:bold'>$nombre : </span> $contenido</li>";
+                    }
+                    echo "</ul>";
+                } else {
+                    echo "<div class='vacio'>La variable $nombreSuperglobal esta vacia en este momento.</div>";
+                }
+            }
             ?>
         </main>
 

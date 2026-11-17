@@ -32,6 +32,7 @@
         </header>
 
         <main>
+            <!-- Al entregar el el formulario el usuario sera redirigido al tratamiento -->
             <form action="Tratamiento.php" name="formulario" method="post" novalidate>
                 <h3>Formulario: Tratamiento</h3>
                 <label for="nombre" >Nombre:</label>

@@ -24,7 +24,7 @@
 
         <main>
             <?php
-            
+            //Inicializamos el array asociativo, con la clave siendo dias del mes y valor el sueldo por dia
             $aSueldoSemanal = ["Lunes" => 50,
                 "Martes" => 60,
                 "Miercoles" => 55.10,
@@ -32,12 +32,13 @@
                 "Viernes" => 20,
                 "Sabado" => 40.77 ,
                 "Domingo" => 10];
-            $ftotal=0;
+            $ftotal=0; //Inicializamos el valor total
             echo '<h3> Arrays: Sueldo </h3> <ul>';
-            
+            //usamos un foreach para recorrer el array
             foreach($aSueldoSemanal as $sdia => $fsueldo){
-            echo "<li> el dia <span class='dia'>$sdia</span> cobro <span class='paga'>$fsueldo</span> </li>";
-            $ftotal+=$fsueldo;
+                echo "<li> el dia <span class='dia'>$sdia</span> cobro <span class='paga'>$fsueldo</span> </li>";
+                //sumamos el sueldo al total
+                $ftotal+=$fsueldo;
             }
             printf( "</ul> <p> Paga de la semana fue %.2f",$ftotal );  
             

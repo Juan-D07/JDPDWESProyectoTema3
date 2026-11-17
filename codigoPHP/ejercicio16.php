@@ -24,7 +24,7 @@
 
         <main>
             <?php
-            
+            //Inicializamos el array asociativo, con la clave siendo dias del mes y valor el sueldo por dia
             $aSueldoSemanal = ["Lunes" => 50,
                 "Martes" => 60,
                 "Miercoles" => 55.10,
@@ -32,14 +32,15 @@
                 "Viernes" => 20,
                 "Sabado" => 40.77 ,
                 "Domingo" => 10];
-            reset($aSueldoSemanal);
-            $ftotal=0;
+            reset($aSueldoSemanal); // reiniciamos el puntero para que apunte al primer valor
+            $ftotal=0;//Inicializamos el valor total
             echo '<h3> Arrays: Sueldo </h3> <ul>';
-            
+            //Iniciamos un while, que recorre el array
+            //la clave sera null cuando no haiga recorrido todo el array
             while (key($aSueldoSemanal)!== null){
                 echo "<li> el dia <span class='dia'>".key($aSueldoSemanal)."</span> cobro <span class='paga'>".current($aSueldoSemanal)."</span> </li>";
-                $ftotal+=current($aSueldoSemanal);
-                next($aSueldoSemanal);
+                $ftotal+=current($aSueldoSemanal);//sumamos el valor al total semanal
+                next($aSueldoSemanal);//el puntero se mueve al siguiente valor
             }
 
             printf( "</ul> <p> Paga de la semana fue %.2f",$ftotal );  

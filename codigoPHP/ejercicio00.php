@@ -17,7 +17,9 @@
 
   <main>
       <?php
+      //imprimir hola mundo
       echo 'Hola mundo';
+      //mostrar php info
       phpinfo();
       ?>
         

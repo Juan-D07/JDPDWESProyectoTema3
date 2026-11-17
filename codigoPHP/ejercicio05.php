@@ -22,9 +22,9 @@
             $oFechaHoraActual= new DateTime(); //Declaro un objeto de la clase DateTime
             $oFechaCaidaMuroBerlin= new DateTime('1989-11-9'); //Declaro un objeto de la clase DateTime con la fecha de la caida del muro de Berlin
              
-            echo '<p> Marca de tiempo de hoy (timestamp): ' .$oFechaHoraActual->getTimestamp() .'</p>';
-            echo '<p> Marca de tiempo de la Caida del Muro de Berlin: ' .$oFechaCaidaMuroBerlin->getTimestamp() .'</p>';
-            echo '<p> Fecha de la Caida del Muro de Berlin: ' .$oFechaCaidaMuroBerlin->format("d-m-Y") .'</p>';
+            echo '<p> Marca de tiempo de hoy (timestamp): ' .$oFechaHoraActual->getTimestamp() .'</p>'; //imprimir el timestamp de la fecha actual
+            echo '<p> Marca de tiempo de la Caida del Muro de Berlin: ' .$oFechaCaidaMuroBerlin->getTimestamp() .'</p>';//imprimir el timestamp de la fecha de la caida del muro de Berlin
+            echo '<p> Fecha de la Caida del Muro de Berlin: ' .$oFechaCaidaMuroBerlin->format("d-m-Y") .'</p>';//imprimir la fecha de la caida del muro de Berlin
             ?>
         </main>
 

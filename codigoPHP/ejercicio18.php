@@ -27,15 +27,18 @@
 
         <main>
             <?php
+            //Inicializamos la matriz de dos filas, representando un teatro
             $aAseintosDisponibilidadTeatro = [["libre", "libre", "libre", "libre", "libre", "libre", "libre", "libre", "Moises", "libre", "Yolanda", "libre", "libre", "libre", "libre", "libre", "libre", "Juan", "libre", "libre", "libre", "libre", "libre", "libre"],
                         ["libre", "Alvaro", "libre", "libre", "libre", "libre", "libre", "libre", "libre", "libre", "libre", "libre", "libre", "libre", "libre", "Santiago", "libre", "libre"]];
 
             echo '<h3> Funciones: Asientos Teatro </h3>';
-
+            //recorrer matriz con un while y funciones de array
             while (key($aAseintosDisponibilidadTeatro)!== null) {
                 echo '<p>';
                 $aAseintosDisponibilidadTeatroFila=current($aAseintosDisponibilidadTeatro);
+                //recorro el array dentro de la matriz
                 while (key($aAseintosDisponibilidadTeatroFila)!== null) {
+                    //comprobacion si el asiento esta libre o ocupado
                     if (strcmp(current($aAseintosDisponibilidadTeatroFila), "libre") == 0) {
                         echo "<span class='libre'>" . current($aAseintosDisponibilidadTeatroFila) . " <span>";
                     } else {
