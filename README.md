@@ -25,6 +25,7 @@ Abrir un navegador web.
 visualiza las practicas y prueba los formularios
 ## 5. Estructura del proyecto
 
+```text
 JDPDWESProyectoTema3/
 ├── indexProyectoTema3.php
 ├── .htaccess
@@ -33,6 +34,7 @@ JDPDWESProyectoTema3/
 ├── webroot
 ├── error
 └── core
+```
 
 ## 6. Funcionalidades
 - Visualizar varibles y usu tipos
