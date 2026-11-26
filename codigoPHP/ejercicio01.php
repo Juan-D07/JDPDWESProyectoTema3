@@ -50,8 +50,9 @@ echo '<p> la variable <span class="nombre"> $sNombre </span> es de tipo '. "<spa
 echo '<p> la variable <span class="nombre"> $iEdad </span> es de tipo '. "<span class='tipo'>".gettype($iEdad)."</span> y contiene el <span class='valor'>$iEdad </span></p>";
 echo '<p> la variable <span class="nombre"> $fSaldo </span> es de tipo '. "<span class='tipo'>".gettype($fSaldo)."</span> y contiene el <span class='valor'>$fSaldo </span></p>";
 echo '<p> la variable <span class="nombre"> $bSoleado </span> es de tipo '. "<span class='tipo'>".gettype($bSoleado)."</span> y contiene el <span class='valor'>$bSoleado </span></p>";
-// echo '<p> la variable <span class="nombre"> $aColores </span> es de tipo '. "<span class='tipo'>".gettype($aColores)."</span> y contiene el <span class='valor'>$aColores </span></p>";
-// da un warning
+echo '<p> la variable <span class="nombre"> $aColores </span> es de tipo '. "<span class='tipo'>".gettype($aColores)."</span> y contiene el <span class='valor'>$aColores </span></p>"; //da un warning
+echo '<p> la variable <span class="nombre"> BIENVENIDA </span> es de tipo '. "<span class='tipo'>".gettype(BIENVENIDA)."</span> y contiene el <span class='valor'>".BIENVENIDA ."</span></p>";
+
 
 //imprimir variables con print
 print '<h3> Imprir por pantalla con "print" </h3>';
@@ -59,7 +60,8 @@ print '<p> la variable <span class="nombre"> $sNombre </span> es de tipo '. "<sp
 print '<p> la variable <span class="nombre"> $iEdad </span> es de tipo '. "<span class='tipo'>".gettype($iEdad)."</span> y contiene el <span class='valor'>$iEdad </span></p>";
 print '<p> la variable <span class="nombre"> $fSaldo </span> es de tipo '. "<span class='tipo'>".gettype($fSaldo)."</span> y contiene el <span class='valor'>$fSaldo </span></p>";
 print '<p> la variable <span class="nombre"> $bSoleado </span> es de tipo '. "<span class='tipo'>".gettype($bSoleado)."</span> y contiene el <span class='valor'>$bSoleado </span></p>";
-// print '<p> la variable <span class="nombre"> $aColores </span> es de tipo '. "<span class='tipo'>".gettype($aColores)."</span> y contiene el <span class='valor'>$aColores </span></p>";
+print '<p> la variable <span class="nombre"> $aColores </span> es de tipo '. "<span class='tipo'>".gettype($aColores)."</span> y contiene el <span class='valor'>$aColores </span></p>";
+print '<p> la variable <span class="nombre"> BIENVENIDA </span> es de tipo '. "<span class='tipo'>".gettype(BIENVENIDA)."</span> y contiene el <span class='valor'>".BIENVENIDA." </span></p>";
 
 //imprimir variables con printf, usa parametors para mostrar las variabbles
 printf('<h3> Imprir por pantalla con "printf" </h3>');
@@ -67,7 +69,8 @@ printf('<p> la variable <span class="nombre"> %s </span> es de tipo '. "<span cl
 printf('<p> la variable <span class="nombre"> %s </span> es de tipo '. "<span class='tipo'> %s </span> y contiene el <span class='valor'> %d </span></p>",'$iEdad',gettype($iEdad),$iEdad);
 printf('<p> la variable <span class="nombre"> %s </span> es de tipo '. "<span class='tipo'> %s </span> y contiene el <span class='valor'> %.2f </span></p>",'$fSaldo',gettype($fSaldo),$fSaldo);
 printf('<p> la variable <span class="nombre"> %s </span> es de tipo '. "<span class='tipo'> %s </span> y contiene el <span class='valor'> %s </span></p>",'$bSoleado',gettype($bSoleado),$bSoleado);
-// printf('<p> la variable <span class="nombre"> %s </span> es de tipo '. "<span class='tipo'> %s </span> y contiene el <span class='valor'> %s </span></p>",'$aColores',gettype($aColores),$aColores);
+printf('<p> la variable <span class="nombre"> %s </span> es de tipo '. "<span class='tipo'> %s </span> y contiene el <span class='valor'> %s </span></p>",'$aColores',gettype($aColores),$aColores);
+printf('<p> la variable <span class="nombre"> %s </span> es de tipo '. "<span class='tipo'> %s </span> y contiene el <span class='valor'> %s </span></p>",'BIENVENIDA',gettype(BIENVENIDA),BIENVENIDA);
 
 //imprimir variables con print_r, usar para imprir arrays
 print_r('<h3> Imprir por pantalla con "print_r" </h3>');
@@ -78,6 +81,8 @@ print_r('<p> la variable <span class="nombre"> $bSoleado </span> es de tipo '. "
 print_r('<p> la variable <span class="nombre"> $aColores </span> es de tipo '. "<span class='tipo'>".gettype($aColores)."</span> y contiene el <span class='valor'>");
 print_r($aColores);
 print_r("</span></p>");
+print_r('<p> la variable <span class="nombre"> BIENVENIDA </span> es de tipo '. "<span class='tipo'>".gettype(BIENVENIDA)."</span> y contiene el <span class='valor'>BIENVENIDA </span></p>");
+
 
 //imprimir variables con var_dump, usar para ver detalles de la variable
 echo '<h3> Imprir por pantalla con "var_dump" </h3>';
@@ -91,6 +96,8 @@ echo '<p> la variable <span class="nombre"> $bSoleado </span> es de tipo '. "<sp
 echo var_dump($bSoleado)." </span></p>";
 echo '<p> la variable <span class="nombre"> $aColores </span> es de tipo '. "<span class='tipo'>".gettype($aColores)."</span> y contiene el <span class='valor'>"; 
 echo var_dump($aColores)." </span></p>";
+echo '<p> la variable <span class="nombre"> BIENVENIDA </span> es de tipo '. "<span class='tipo'>".gettype(BIENVENIDA)."</span> y contiene el <span class='valor'>"; 
+echo var_dump(BIENVENIDA)." </span></p>";
 ?>
   </main>
 
