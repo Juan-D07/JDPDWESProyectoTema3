@@ -1,108 +1,198 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
-        *{
-            box-sizing: border-box;
-            font-family: Oswald;
-            font-weight: 400; 
-          }
+*{
+    box-sizing: border-box;
+    font-family: Oswald;
+    font-weight: 400;
+}
 
-          html{
-            scroll-behavior: smooth;
-          }
+html{
+    scroll-behavior: smooth;
+}
 
-          body{
-            margin: 0;
-            color:black;
-            font-family: Roboto, Arial;
-            background-color: rgb(255, 253, 253);
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-          }
+body{
+    margin: 0;
+    color:black;
+    font-family: Roboto, Arial;
+    background-color: rgb(255, 253, 253);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-          
-        header{
-          background-color: rgb(10, 10, 10);
-          color: white;
-          height: 120px;
-          align-items: center;
-          text-align: center;
+
+header{
+    background-color: rgb(10, 10, 10);
+    color: white;
+    height: 120px;
+    align-items: center;
+    text-align: center;
+}
+
+
+h2{
+    font-size: 3vw;
+    border-bottom: 2px solid orange;
+    padding: 4px;
+    margin: 10px 12vw 0;
+    align-self: center;
+}
+
+h3{
+        font-size: 2.1vw;
+        color: black;
+        margin-top: 0;
+    }
+
+main{
+    padding: 20px 50px ;
+}
+
+.container{
+    background-color: #fff;
+    width: 1000px;
+    box-shadow: 0 16px 20px #aaa;
+    margin: 20px auto;
+    border-radius: 20px;
+    padding: 20px;
+    align-content: center;
+    text-align: center
+}
+
+.resultados{
+    margin: 20px auto;
+    tr{
+        font-size: 20px;
+        td:nth-child(1){
+            width: 400px;
+            text-align: right;
         }
-
-
-        h2{
-          font-size: 3vw;
-          border-bottom: 2px solid orange;
-          padding: 4px;
-          margin: 10px 12vw 0;
-          align-self: center;
+        td:nth-child(2){
+            width: 400px;
+            text-align: left;
         }
-        
-        main{
-            padding: 20px 50px ;
+    }
+}
+
+.formulario{
+    margin: 20px auto;
+}
+
+
+.formulario tr{
+    td{
+        padding-bottom: 20px;
+    }
+    td:nth-child(1){
+        width: 450px;
+        text-align: right;
+    }
+    td:nth-child(2){
+        width: 500px;
+        text-align: left;
+        input:not(input[type="radio"]), select{
+            width: 200px;
+            height: 30px;
+            font-size: 16px;
+            font-weight: 500;
+            background-color: #fffce0;
+            border:1px solid black;
         }
+        span{
+            margin-left: 10px
+        }
+    }
+}
 
-          a {
-            text-decoration: none; 
-            color: black;
-          }
-          a:hover {
-            color: orange;
-          }
-          
-          pre *{
-              font-family:monospace;
-              font-weight: 700;
-          }
-          
-        footer{
-            margin-top: auto;
-            background-color: rgb(10, 10, 10);
-            padding: 4px;
-            color:white;
-            font-size: 20px;
-            font-style:normal;
-          }
+.grupo-opciones{
+    display: flex;
+    height:40px;
+    line-height: 40px
+    input{
+        width:10px;
+        height:10px;
+    }
+    label{
+        line-height: 40px;
+        margin-right: 16px
+    }
+    span{
+        line-height: 40px;
+        margin-left: 10px
+    }
+}
 
-          .foo-txt{
-            text-align: center;
-          }
+b{
+    font-weight: bold;
+}
 
-          .miweb-link{
-            color:white;
-            text-decoration: none;
-          }
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    color: orange;
+}
 
-          .miweb-link:hover{
-            color:orange;
-          }
-          
-          .github{
-            height:30px;
-            padding-left: 10px;  
-          }
-          
-          .casa{
-            height:30px;
-            padding-left: 10px;  
-          }
+pre *{
+    font-family:monospace;
+    font-weight: 700;
+}
+
+footer{
+    margin-top: auto;
+    background-color: rgb(10, 10, 10);
+    padding: 4px;
+    color:white;
+    font-size: 20px;
+    font-style:normal;
+}
+
+.foo-txt{
+    text-align: center;
+}
+
+.miweb-link{
+    color:white;
+    text-decoration: none;
+}
+
+.miweb-link:hover{
+    color:orange;
+}
+
+.github{
+    height:30px;
+    padding-left: 10px;
+}
+
+.casa{
+    height:30px;
+    padding-left: 10px;
+}
 
 
-          @media (min-width:621px) and (max-width: 1001px){
-              h2{
-              font-size: 20px;
-            }
-          }
+@media (min-width:621px) and (max-width: 1001px){
+    h2{
+        font-size: 20px;
+    }
+}
 
-          @media (max-width: 620px){
-             h2{
-              font-size: 16px;
-            }
+@media (max-width: 620px){
+    h2{
+        font-size: 16px;
+    }
 
-          }
+}
 
-          @media (min-width: 1800px){
-            h2{
-              font-size: 36px;
-            }
-          }
+@media (min-width: 1800px){
+    h2{
+        font-size: 36px;
+    }
+}
+
+input[type="submit"]:hover{
+        color:white;
+        background-color: black;
+        cursor: pointer;
+    }
