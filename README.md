@@ -1,55 +1,54 @@
-# Markdown Cheat Sheet (Example File)
 
-This is a **generic Markdown template** showcasing essential formatting features.
+# Aplicación de Proyecto Tema 3
+## 1. Descripción
+Esta aplicación web está desarrollada en PHP y Practica de variables, objetos DateTime, arryas y matrizes.
+Tambien la creacion y validacion de un formulario.
 
----
+## 2. Requisitos
+- PHP 8.3 o superior.
+- Un servidor web, como Apache, o el servidor de desarrollo integrado de PHP.
+## 3. Instalación
+Clonar el repositorio:
+`git clone https://github.com/Juan-D07/JDPDWESProyectoTema3`
 
-## 1. Headers
-# H1 (Largest)
-## H2
-### H3
-#### H4
-##### H5
-###### H6 (Smallest)
+Acceder a la carpeta del proyecto:
+`cd JDPDWESProyectoTema3`
 
----
+Iniciar el servidor de desarrollo de PHP:
+`php -S localhost:8000`
 
-## 2. Text Formatting
-- **Bold** (`**text**` or `__text__`)
-- *Italic* (`*text*` or `_text_`)
-- ~~Strikethrough~~ (`~~text~~`)
-- `Inline Code` (`` `code` ``)
-- > Blockquote (prefix with `>`)
+## 4. Uso
+Una vez iniciado el servidor:
 
----
+Abrir un navegador web.
+`Acceder a http://localhost:8000.`
+visualiza las practicas y prueba los formularios
+## 5. Estructura del proyecto
 
-## 3. Lists
-### Unordered List
-- Item 1
-- Item 2
-  - Nested Item (indent with 2 spaces)
+```text
+JDPDWESProyectoTema3/
+├── indexProyectoTema3.php
+├── .htaccess
+├── codigoPHP
+├── mostrarcodigo
+├── webroot
+├── error
+└── core
+```
 
-### Ordered List
-1. First item
-2. Second item
-   1. Nested item (indent with 3 spaces)
+## 6. Funcionalidades
+- Visualizar varibles y usu tipos
+- Practica de objeto DateTime
+- Visualizar arrays y matrizes
+- Uso de formularios
+- Validacion y saneamiento de formularios
+## 7. Contribuciones
+Las contribuciones son bienvenidas. Para colaborar, se recomienda:
 
-### Task List
-- [x] Completed task
-- [ ] Pending task (`[ ]`)
-
----
-
-## 4. Links
-- [Hyperlink](https://example.com) (`[text](url)`)
-
----
-
-## 5. Code Blocks
-```java
-# Syntax-highlighted block (java)
-class HelloWorld {
-    public static main(String... args) {
-        System.out.println("Hello markdown");
-    }
-}
+Crear un fork del repositorio.
+Crear una rama para los cambios.
+Realizar las modificaciones necesarias.
+Guardar los cambios mediante un commit descriptivo.
+Enviar una solicitud de cambios (pull request) para su revisión.
+8. Licencia
+Este proyecto puede distribuirse bajo la licencia MIT si el propietario decide adoptarla. Antes de publicar el proyecto, debe añadirse el archivo de licencia correspondiente y comprobar que se cumplen sus condiciones.
