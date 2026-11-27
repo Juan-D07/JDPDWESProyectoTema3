@@ -18,9 +18,21 @@
         <main>
             <h3> Mostrar Variables superglobales</h3>
             <?php
+            
+            // Array con todas las variables superglobales de PHP
+            $aSuperglobales = [
+                '$_SERVER' => $_SERVER,
+                '$_REQUEST' => $_REQUEST,
+                '$_GET' => $_GET,
+                '$_POST' => $_POST,
+                '$_FILES' => $_FILES,
+                '$_COOKIE' => $_COOKIE,
+                '$_SESSION' => isset($_SESSION) ? $_SESSION : [],
+                '$_ENV' => $_ENV
+            ];
 
             // Recorrer el array de variables super global
-            foreach ($GLOBALS as $nombreSuperglobal => $arraySuperglobal) {
+            foreach ($aSuperglobales as $nombreSuperglobal => $arraySuperglobal) {
                 echo "<h3 class='superGlobal'>$nombreSuperglobal</h3>";
                 //combrobacion de que la variable no este vacia
                 if (!empty($arraySuperglobal)) {
